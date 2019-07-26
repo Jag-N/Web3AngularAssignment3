@@ -1,0 +1,16 @@
+<nav>
+    <button *ngFor="let book of myBooks; let i = index" id="btn{{i}}" (click)="onClickSelectBook(i)" class="nav-btn">{{book.name}}</button>
+</nav>
+<div class="grid-container">
+    <div class="book-info">
+        <ul>
+            <li><strong>Book Name:</strong> {{myBooks[selectedBookIndex].name}}</li>
+            <li><strong>Author:</strong> {{myBooks[selectedBookIndex].author}}</li>
+            <li><strong>Genre:</strong> {{myBooks[selectedBookIndex].genre}}</li>
+            <li><strong>Year Published:</strong> {{myBooks[selectedBookIndex].yearPublished}}</li>
+        </ul>
+    </div>
+    <div>
+        <img src="{{myBooks[selectedBookIndex].picture}}" width="200px">
+    </div>
+</div>
